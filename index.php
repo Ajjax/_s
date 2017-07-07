@@ -16,7 +16,7 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-
+			<?php echo "coucou main page"; ?>
 		<?php
 		if ( have_posts() ) :
 
