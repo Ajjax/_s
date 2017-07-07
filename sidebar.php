@@ -13,5 +13,10 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 ?>
 
 <aside id="secondary" class="widget-area">
-	<?php dynamic_sidebar( 'sidebar-1' ); ?>
+	<?php
+	echo "<h2>Bonjour ceci est une sidebar</h2>";
+	?>
+	<?php dynamic_sidebar( 'sidebar-1' );
+	echo "<h1>Ceci est la fin du widget</h1>";
+	 ?>
 </aside><!-- #secondary -->
