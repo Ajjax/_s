@@ -16,6 +16,26 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
+
+			<?php $args = array('post_type'=>"post", "posts_per_page" => 5);
+			$query = new WP_Query($args);
+			 ?>
+			 <?php if (have_posts()) {
+				 ?>
+<div class="single-item">
+				 <?php
+	while (have_posts()) {
+	the_post();
+	?>
+<div class="slide" style='background-image:url("<?php echo get_the_post_thumbnail_url(); ?>");height:400px;background-size:contain;background-repeat:no-repeat;background-position:center;'>
+<figcaption><?php echo the_title(); ?></figcaption>
+</div>
+<?php
+	}
+	?>
+</div>
+	<?php
+			 } ?>
 		<?php
 		if ( have_posts() ) :
 
@@ -23,6 +43,10 @@ get_header(); ?>
 				<header>
 					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
 				</header>
+
+
+
+
 
 			<?php
 			endif;
@@ -53,3 +77,9 @@ get_header(); ?>
 <?php
 get_sidebar();
 get_footer();
+?>
+<script type="text/javascript">
+	$('.single-item').slick();
+</script
+
+<?php
