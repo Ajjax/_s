@@ -6,7 +6,7 @@
  *
  * @package _s
  */
-
+// HEY BONJOUR!
 get_header(); ?>
 
 	<div id="primary" class="content-area">
