@@ -27,7 +27,7 @@ echo "C'est parti les amis ! ";
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', '_s' ); ?></a>
 
-	<header id="masthead" class="site-header">
+	<header id="masthead" class="site-header" style="background-color:#fff;" "border-color:black;">  
 		<div class="site-branding">
 			<?php
 			the_custom_logo();
@@ -45,7 +45,7 @@ echo "C'est parti les amis ! ";
 			endif; ?>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation">
+		<nav id="site-navigation" class="cesi">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', '_s' ); ?></button>
 			<?php
 				wp_nav_menu( array(
